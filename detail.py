@@ -40,3 +40,5 @@ print(type(z))
 import random
 print(random.randrange(5,10))
 
+z=int(4.785)
+print(z)
