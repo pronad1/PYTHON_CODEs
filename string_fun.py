@@ -18,5 +18,11 @@ print(t.upper())
 print(t.lower())
 
 # strip() "The strip() method removes any whitespace from the begginning or the end ";
-a=" Hey Man! "
+a=" Hey, Man! "
 print(a.strip(),1)
+
+# Replace()
+print(a.replace('H','B'))
+
+#split() " The split() method splits the string into substrings if it finds instances of the separator: ";
+print(a.split(','))
