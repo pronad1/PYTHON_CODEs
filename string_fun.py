@@ -26,3 +26,11 @@ print(a.replace('H','B'))
 
 #split() " The split() method splits the string into substrings if it finds instances of the separator: ";
 print(a.split(','))
+
+a="pro"; b="sen";
+c=a,b; print(c);print(b+a);
+
+# string formate 
+age=25
+st=f"My name is Prosenjit , I am {age:.2f} old and I have {5*4} experiances. "
+print(st)
