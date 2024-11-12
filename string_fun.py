@@ -34,3 +34,10 @@ c=a,b; print(c);print(b+a);
 age=25
 st=f"My name is Prosenjit , I am {age:.2f} old and I have {5*4} experiances. "
 print(st)
+
+txt="this  will insert one \\(backslash)." ; print(txt)
+##txt.capitalize() ; print(txt)
+
+print(bool(txt))
+
+x="Pro"; print(isinstance(x,str))
