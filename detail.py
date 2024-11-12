@@ -29,3 +29,10 @@ def fun():
 fun()
 print("By using global keyword "+p)
 print(type(p)) #Print datatype
+
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+print(type(x))
+print(type(y))
+print(type(z))
