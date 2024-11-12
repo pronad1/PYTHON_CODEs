@@ -42,3 +42,6 @@ print(random.randrange(5,10))
 
 z=int(4.785)
 print(z)
+z=float("3.497")
+print(z,' ','This is my last semester CGPA','\n',"And now I am trying to do something better: ")
+
