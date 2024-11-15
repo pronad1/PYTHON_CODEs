@@ -1,9 +1,8 @@
-t = int(input())
-for _ in range(t):
+for _ in range(int(input())):
     n = int(input())
-    s=map(int, input().split())
+    a = map(int, input().split())
     
-    t=sum(s)
-    min= t%2
-    max= min(t, n)
+    s = sum(a)
+    min = s % 2
+    max = s if s <= n else 2 *n -s 
     print(min, max)
