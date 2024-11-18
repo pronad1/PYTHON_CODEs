@@ -1,4 +1,10 @@
 for _ in range(int(input())):
     s=str(input())
-    if s[1]=='=' and s[0]==s[2]:
-        print(s)
+    a=int(s[0])
+    b=int(s[2])
+    if a>b:
+        print(f"{str(a)}>{str(b)}")
+    elif a<b:
+        print(f"{str(a)}<{str(b)}")
+    else:
+        print(f"{str(a)}={str(b)}")
