@@ -1,6 +1,5 @@
-for _ in range(int(input())):
-    n=int(input())
-    arr=map(int,input().split())
-    uni=list(set(arr))
+n=int(input())
+uni=list(set(map(int,input().split())))
 
-    print(arr)
+r=list(uni)[::-1]
+print(r[1])
