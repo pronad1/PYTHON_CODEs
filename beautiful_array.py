@@ -1,32 +1,29 @@
-def find_beautiful_array(input_mean, input_median):
-    for array_length in range(1, 1001):
-        candidate_array = [input_median] * array_length
+def find_beautiful_array(a, b):
+    for n in range(1, 1001):  # Try array lengths from 1 to 1000
+        # Step 1: Initialize array to satisfy the median condition
+        if n % 2 == 1:  # Odd-length array
+            array = [b] * n  # All elements are 'b'
+        else:  # Even-length array
+            array = [b] * (n - 1)
+            array.append(b + 1)  # Ensure two middle values average to 'b'
 
+        # Step 2: Adjust to satisfy the mean condition
+        required_sum = a * n
+        current_sum = sum(array)
+        difference = required_sum - current_sum
 
-        required_sum = input_mean * array_length
-        current_sum = sum(candidate_array)
-        remaining_difference = required_sum - current_sum
+        # Distribute the difference to the first element
+        if abs(array[0] + difference) <= 10**6:  # Ensure within bounds
+            array[0] += difference
+            return n, array
 
-        if abs(remaining_difference) <= (10 ** 6) * (array_length - 1):
-            for i in range(array_length - 1):
-                if remaining_difference == 0:
-                    break
-                adjustment = min(
-                    max(-10 ** 6 - candidate_array[i], remaining_difference),
-                    10 ** 6 - candidate_array[i]
-                )
-                candidate_array[i] += adjustment
-                remaining_difference -= adjustment
+    raise RuntimeError("No valid array found (should never happen)")  # Handle unexpected cases
 
-
-            if remaining_difference == 0:
-                return array_length, candidate_array
-
-
-    return None, []
-
-
-user_mean, user_median = map(int, input().split())
-final_length, final_array = find_beautiful_array(user_mean, user_median)
-print(final_length)
-print(" ".join(map(str, final_array)))
+# Input and Output
+try:
+    a, b = map(int, input().split())
+    length, beautiful_array = find_beautiful_array(a, b)
+    print(length)
+    print(" ".join(map(str, beautiful_array)))
+except Exception as e:
+    print("Error:", e)
