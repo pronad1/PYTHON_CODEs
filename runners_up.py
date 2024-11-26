@@ -1,5 +1,7 @@
 n=int(input())
-uni=list(set(map(int,input().split())))
-
-r=list(uni)[::-1]
-print(r[1])
+arr=map(int,input().split())
+arr=sorted(arr,reverse=True)
+for i in arr:
+    if i < max(arr):
+        print(i)
+        break
