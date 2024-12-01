@@ -7,10 +7,15 @@ for _ in range(int(input())):
     while z<n:
         if s[z]=='0':
             y+=1
+        else:
+            y=0
+
+
         if y==m:
             x+=1
             y=0
             z+=k-1
+
         z+=1
 
     print(x)
