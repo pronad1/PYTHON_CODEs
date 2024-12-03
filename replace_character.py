@@ -1,21 +1,20 @@
-from collections import Counter
-
-
 def solve():
-    for _ in range(int(input())):
-        n = int(input())
-        s = input().strip()
+    n = int(input())
+    s = list(input())
+    original = s.copy()
+    a = [0] * n
+    for i in range(n):
+        a[i] = s.count(s[i])
 
-        char_count = Counter(s)
-
-        max_char = max(char_count, key=char_count.get)
-
-        for i in range(len(s)):
-            if s[i] != max_char:
-                s = s[:i] + max_char + s[i + 1:]
+    s[a.index(min(a))] = s[a.index(max(a))]
+    if s == original:
+        for i in range(1, n):
+            if s[i] != s[0]:
+                s[0] = s[i]
                 break
+    print(''.join(s))
 
-        print(s)
+for _ in range(int(input())):
+    solve()
 
 
-solve()
