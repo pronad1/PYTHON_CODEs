@@ -1,11 +1,17 @@
 for _ in range(int(input())):
     n=int(input())
     arr=list(map(int,input().split()))
-    c=1
-    s=-1
-    d=8
+    happy=0
+    cur_pic=0
+    layer=0
+    pic_re=1
+
     for i in range(n):
-        s+=arr[i]
-        if int(s/d)>=1:
-            c+=1
-            d+=
+        cur_pic+=arr[i]
+
+        while cur_pic>=pic_re:
+            happy+=1
+            layer+=1
+            pic_re+=8*layer
+
+    print(happy)
