@@ -10,8 +10,9 @@ for _ in range(int(input())):
         cur_pic+=arr[i]
 
         while cur_pic>=pic_re:
-            happy+=1
-            layer+=1
-            pic_re+=8*layer
+            if cur_pic==pic_re:
+                happy+=1
+        layer+=1
+        pic_re+=8*layer
 
     print(happy)
