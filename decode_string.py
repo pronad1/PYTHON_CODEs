@@ -1,17 +1,17 @@
-for _ in range(int(input())):
-    n=int(input())
-    s=str(input())
-    c=''
-    i=0
-    while i<n:
-        t=97
-        if i+2<n and s[i+2]=='0':
-            t+=int(s[i])*10 + int(s[i+1])
-            c+=chr(t+ord('a')-1)
-            i+=3
-        else:
-            t=int(s[i])
-            c+=chr(t+ord('a')-1)
-            i+=1
 
-    print(c)
+for t in range(int(input())):
+    nn = int(input())
+    s = input()
+    first = ""
+    ans = ""
+    i = nn - 1
+    while i >= 0:
+        if s[i] == "0":
+            first = s[i - 2] + s[i - 1]
+            i -= 3
+        else:
+            first = s[i]
+            i -= 1
+        x = int(first)
+        ans = chr(96 + x) + ans
+    print(ans)
