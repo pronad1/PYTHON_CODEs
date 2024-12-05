@@ -2,15 +2,18 @@ for _ in range(int(input())):
     n=int(input())
     arr=list(map(int,input().split()))
 
-    fre={}
-    f=True
-    for a in arr:
-        if a in fre:
-         fre[a]+=1
-         f=False
-         break
-        else:
-            fre[a]=1
+    tot=sum(arr)
+    if tot%n!=0:
+        print("NO")
+    else:
+        t=tot//n
+        ps=0
+        f=True
 
+        for i in range(n):
+            ps+=arr[i]-t
 
-    print("YES" if f in fre else "NO")
+            if ps<0:
+                f=False
+                break
+        print("YES" if f else "NO")
