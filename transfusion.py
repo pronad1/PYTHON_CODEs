@@ -11,9 +11,8 @@ for _ in range(int(input())):
         f=True
 
         for i in range(n):
-            ps+=arr[i]-t
+            ps+=(arr[i]-t)
+            if ps<0:
+                f=False
 
-        if ps<0:
-            print("NO")
-        else:
-            print("YES")
+        print("YES" if f==True else "NO")
