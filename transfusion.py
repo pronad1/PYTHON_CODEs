@@ -13,7 +13,7 @@ for _ in range(int(input())):
         for i in range(n):
             ps+=arr[i]-t
 
-            if ps<0:
-                f=False
-                break
-        print("YES" if f else "NO")
+        if ps<0:
+            print("NO")
+        else:
+            print("YES")
