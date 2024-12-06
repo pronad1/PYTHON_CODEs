@@ -6,13 +6,21 @@ for _ in range(int(input())):
     if tot%n!=0:
         print("NO")
     else:
-        t=tot//n
-        ps=0
-        f=True
-
+        od=0
+        oc=0
+        ec=0
+        ev=0
         for i in range(n):
-            ps+=(arr[i]-t)
-            if ps<0:
-                f=False
+            if i%2==0:
+                od+=arr[i]
+                oc+=1
+            else:
+                ev+=arr[i]
+                ec+=1
 
-        print("YES" if f==True else "NO")
+        ao=od/oc
+        ae=ev/ec
+        if ao==ae:
+            print("YES")
+        else:
+            print("NO")
