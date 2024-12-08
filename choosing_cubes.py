@@ -10,4 +10,4 @@ for _ in range(int(input())):
     elif a[k] < x:
         print("YES")
     else:
-        print("MAYBE")
+        print("YES" if k==n-1 or a[k-1]<x else "MAYBE")
