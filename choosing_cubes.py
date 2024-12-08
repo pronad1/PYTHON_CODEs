@@ -5,3 +5,9 @@ for _ in range(int(input())):
     a=list(map(int,input().split()))
     x=a[f]
     a.sort(reverse=True)
+    if a[k] > x:
+        print("NO")
+    elif a[k] < x:
+        print("YES")
+    else:
+        print("MAYBE")
