@@ -3,19 +3,20 @@ t = int(input())
 for _ in range(t):
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
-    possible = False
-    i=0
-    for i in range(n):
-        can_win = False
-        for j in range(n):
-            if i != j and abs(a[i] - a[j]) % k == 0:
-                can_win = True
-                break
-        if can_win:
-            possible = True
-            print("NO")
+    b=[[] for _ in range(k)]
+
+    for i in range(0,n):
+        x=a[i]
+        b[x%k].append(i+1)
+
+    re=-1
+    for i in range(k):
+        if len(b[i])==1:
+            re=b[i][0]
             break
 
-    if not possible:
+    if re==-1:
+        print("NO")
+    else:
         print("YES")
-        print(i + 1)
+        print(re)
