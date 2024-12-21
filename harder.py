@@ -1,15 +1,15 @@
-t = int(input())
+for _ in range(int(input())):
+    n=int(input())
+    a=list(map(int,input().split()))
+    b=[True for i in range(n)]
 
-for _ in range(t):
-    n = int(input())
-    a = list(map(int, input().split()))
-
-    b = [0] * n
-    freq = [0] * (n + 1)
-
+    for x in a:
+        if b[x-1]:
+            print(x,end='')
+            b[x-1]=False
+    
     for i in range(n):
-        b[i] = a[i]
-        freq[b[i]] += 1
-
-
-    print(" ".join(map(str, b)))
+        if b[i]:
+            print(i+1,end='')
+    
+    print()
