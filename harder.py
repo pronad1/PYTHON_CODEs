@@ -5,11 +5,11 @@ for _ in range(int(input())):
 
     for x in a:
         if b[x-1]:
-            print(x,end='')
+            print(x,end=' ')
             b[x-1]=False
     
     for i in range(n):
         if b[i]:
-            print(i+1,end='')
+            print(i+1,end=' ')
     
     print()
