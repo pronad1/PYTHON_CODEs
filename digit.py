@@ -17,3 +17,6 @@ for _ in range(int(input())):
         b=1
     if(b*d)%9==0:
         a.append(9)
+
+
+    print(*a)
