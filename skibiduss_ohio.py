@@ -1,16 +1,22 @@
-def min_length(s):
-    l=len(s)
-    p=0
-    for i in range(0,l-1):
-        if s[i] == s[i+1]:
-            p+=1
-    return max(l-p*2,1)
+for i in range(int(input())):
+    s=input().strip()
+    if len(s)==2:
+        if s[0]==s[1]:
+            print(1)
+        else:
+            print(2)
+    else:
+        l=len(s)
+        stack=[]
+        if s[0]!=s[1]:
+            stack.append(s[0])
 
-def main():
-    t = int(input())
-    for _ in range(t):
-        s = input().strip()
-        print(min_length(s))
-
-if __name__ == "__main__":
-    main()
+        for i in range(1,l-1):
+            if s[i]!=s[i+1]:
+                # print(s[i])
+                stack.append(s[i])
+        if s[l-1]!=s[l-2]:
+            stack.append(s[l-1])
+            
+        print(len(stack))
+        
