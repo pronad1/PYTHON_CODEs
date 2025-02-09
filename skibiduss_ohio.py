@@ -1,6 +1,8 @@
 for i in range(int(input())):
     s=input().strip()
-    if len(s)==2:
+    if len(s)==1:
+        print(1)
+    elif len(s)==2:
         if s[0]==s[1]:
             print(1)
         else:
@@ -17,6 +19,6 @@ for i in range(int(input())):
                 stack.append(s[i])
         if s[l-1]!=s[l-2]:
             stack.append(s[l-1])
-            
+
         print(len(stack))
         
