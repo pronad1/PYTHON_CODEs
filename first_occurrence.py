@@ -8,4 +8,5 @@ for i in range(int(input())):
             k=True
     
     if k==False:
+        
         print(-1)
