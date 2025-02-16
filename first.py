@@ -17,6 +17,7 @@ for _ in range(t):
     n = int(input())
     s = input().strip()
     blocks = split_blocks(s)
+    print(blocks)
     count = 0
     for i in range(len(blocks) - 1):
         if blocks[i][0] == '1' and blocks[i+1][0] == '0':
