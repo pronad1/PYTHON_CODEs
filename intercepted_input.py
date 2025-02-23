@@ -8,4 +8,9 @@ for i in range(int(input())):
             for j in range(i+1,n):
                 if a[i]*a[j]==r:
                     print(a[i],a[j])
+                    f=1
                     break
+
+        if f==1:
+            break
+            
