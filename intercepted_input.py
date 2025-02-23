@@ -1,17 +1,7 @@
 for i in range(int(input())):
     n=int(input())
     a=list(map(int,input().split()))
-    r=n-2
-    i=0
-    f=0
-    for i in range(n-1):
-        if r%a[i]==0:
-            for j in range(i+1,n):
-                if a[i]*a[j]==r:
-                    print(a[i],a[j])
-                    f=1
-                    break
-
-        if f==1:
+    for i in range(1,n-1):
+        if ((n-2)%i==0 and (n-2)/i in a and i in a):
+            print(int((n-2)/i),i)
             break
-            
