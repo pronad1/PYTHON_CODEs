@@ -3,6 +3,7 @@ for i in range(int(input())):
     a=list(map(int,input().split()))
     r=n-2
     i=0
+    f=0
     for i in range(n-1):
         if r%a[i]==0:
             for j in range(i+1,n):
