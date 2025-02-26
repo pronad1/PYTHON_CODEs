@@ -5,6 +5,7 @@ for i in range(int(input())):
     if k==0:
         print(0)
         continue
+    k=abs(k)
     k=k/p
     r=ceil(k)
     if r>n:
