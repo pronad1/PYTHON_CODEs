@@ -1,18 +1,38 @@
-for i in range(int(input())):
-    n=int(input())
+import math
 
-    if n==1:
-        print("-1")
-        continue
+def is_square(x):
+    if x < 0:
+        return False
+    s = math.isqrt(x)
+    return s * s == x
 
-    p=list(range(1,n+1))
+def main():
+    import sys
+    input = sys.stdin.read().split()
+    t = int(input[0])
+    idx = 1
+    for _ in range(t):
+        n = int(input[idx])
+        idx += 1
+        sum_total = n * (n + 1) // 2
+        if is_square(sum_total):
+            print(-1)
+            continue
+        
+        perm = list(range(n, 0, -1))
+        square_idx = -1
+        current_sum = 0
+        for i in range(n):
+            current_sum += perm[i]
+            if is_square(current_sum):
+                square_idx = i
+                break
+        
+        if square_idx != -1:
+            if square_idx < n - 1:
+                perm[square_idx], perm[square_idx + 1] = perm[square_idx + 1], perm[square_idx]
+        
+        print(' '.join(map(str, perm)))
 
-    if n%2 ==0:
-        for i in range(0,n,2):
-            p[i],p[i+1] =p[i+1],p[i]
-    
-    else:
-        p[0]=n
-        p[1:]=range(1,n)
-    
-    print(" ".join(map(str, p)))
+if __name__ == "__main__":
+    main()
