@@ -1,30 +1,9 @@
-import sys
+import math
 
-input = sys.stdin.read
-data = input().split()
+for i in range(int(input())):
+    n=int(input())
 
-t = int(data[0])
-results = []
-index = 1
-
-for _ in range(t):
-    n = int(data[index])
-    index += 1
-
-    if n == 1:
-        results.append("-1")
-        continue
-
-    p = list(range(1, n + 1))
-
-    if n % 2 == 0:
-        for i in range(0, n, 2):
-            p[i], p[i + 1] = p[i + 1], p[i]
+    if math.sqrt(n*(n+1)/2)%1 ==0:
+        print(-1)
     else:
-        p[0] = n
-        for i in range(1, n - 1, 2):
-            p[i], p[i + 1] = p[i + 1], p[i]
-
-    results.append(" ".join(map(str, p)))
-
-sys.stdout.write("\n".join(results) + "\n")
+        
