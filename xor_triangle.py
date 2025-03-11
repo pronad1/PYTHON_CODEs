@@ -14,14 +14,3 @@
 #     if not f:
 #         print(-1)
 
-
-t = int(input())
-
-for _ in range(t):
-    x = int(input())
-    y = x & -x  # Lowest power of 2 in x
-    
-    if y < x:
-        print(y)
-    else:
-        print(-1)
