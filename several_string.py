@@ -17,11 +17,5 @@ for _ in range(int(input())):
             print("NO")
         continue
     
-    if k==1:
-        c=min(s)
-        if s[n-1]==c and s[0]!=s[n-1]:
-            print("NO")
-        else:
-            print("YES")
-        continue
+    
     print("YES")
