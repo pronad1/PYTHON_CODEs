@@ -7,7 +7,9 @@ for __ in range(int(input())):
         x,y = map(int, input().split())
         a.append((x, y))
     
+    
     c = set(a)
+    print(c)
     # a.sort()
     for i in range(1, n):
         if a[i][0] == a[i - 1][0]:
