@@ -9,6 +9,7 @@ for _ in range(t):
         num = a[i]
         if num in counts:
             counts[num] += 1
+            
         # Check if all required digits are satisfied
         if all(counts[d] >= required[d] for d in required):
             print(i + 1)
