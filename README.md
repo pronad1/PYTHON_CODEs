@@ -1,1 +1,1 @@
-Problems solving in Python.
+Problem solving in Python.
