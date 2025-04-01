@@ -1,8 +1,10 @@
 for _ in range(int(input())):
     n,m,k= map(int, input().split())
     x,y= map(int, input().split())
-    a=[]
+    s="YES"
     for i in range(k):
-        a.append(list(map(int, input().split())))
+        a,b= map(int, input().split())
+        if ((x+y)%2 == (a+b)%2):
+            s="NO"
     
-    print(a[4][0],a[4][1])
+    print(s)
