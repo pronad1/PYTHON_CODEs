@@ -5,4 +5,4 @@ for _ in range(int(input())):
     for i in range(k):
         a.append(list(map(int, input().split())))
     
-    print(a)
+    print(a[4][0],a[4][1])
