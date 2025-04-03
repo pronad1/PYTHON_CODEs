@@ -31,4 +31,4 @@ for _ in range(int(input())):
         cnt[i]=current
 
     answer=[i+cnt[i] for i in range(1,n+1)]
-    print(''.join(map(str, answer)))
+    print(' '.join(map(str, answer)))
