@@ -1,25 +1,24 @@
 from decimal import Decimal, getcontext
 getcontext().prec = 110
 
-for _ in range(int(input())):
-    n_str = input().strip()
-    length = len(n_str)
+t = int(input())
+for _ in range(t):
+    s = input().strip()
+    n = len(s)
     min_cost = Decimal('Infinity')
-    min_deletions = length - 1
+    min_remove = n - 1
 
-    for mask in range(1, 1 << length):
-        num_str = ""
-        digit_sum = 0
-        for i in range(length):
-            if mask & (1 << i):
-                num_str += n_str[i]
-                digit_sum += int(n_str[i])
-        if digit_sum == 0:
-            continue
-        cost = Decimal(int(num_str)) / Decimal(digit_sum)
-        deletions = length - len(num_str)
-        if cost < min_cost or (cost == min_cost and deletions < min_deletions):
-            min_cost = cost
-            min_deletions = deletions
+    from itertools import combinations
+    for l in range(1, min(11, n+1)):
+        for idxs in combinations(range(n), l):
+            num_str = ''.join(s[i] for i in idxs)
+            digit_sum = sum(int(s[i]) for i in idxs)
+            if digit_sum == 0:
+                continue
+            cost = Decimal(int(num_str)) / Decimal(digit_sum)
+            remove = n - l
+            if cost < min_cost or (cost == min_cost and remove < min_remove):
+                min_cost = cost
+                min_remove = remove
 
-    print(min_deletions)
+    print(min_remove)
