@@ -14,6 +14,8 @@
 #     if not f:
 #         print(-1)
 
+
+
 t = int(input())
 
 for _ in range(t):
