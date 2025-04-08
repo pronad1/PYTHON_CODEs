@@ -14,6 +14,4 @@ for _ in range(int(input())):
             if ch !='0':
                 break
         print(n-1+c-z)
-
-
         
