@@ -23,10 +23,11 @@ for _ in range(t):
             current = next_current
             if not current:
                 break
+            
         if current:
             possible = True
             break
 
-        
+
     print("YES" if possible else "NO")
     
