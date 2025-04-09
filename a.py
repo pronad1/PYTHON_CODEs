@@ -26,5 +26,7 @@ for _ in range(t):
         if current:
             possible = True
             break
+
+        
     print("YES" if possible else "NO")
     
