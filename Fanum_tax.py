@@ -26,6 +26,7 @@ for _ in range(t):
     a = list(map(int, sys.stdin.readline().split()))
     b = list(map(int, sys.stdin.readline().split()))
     b_val = b[0]
+
     if can_sort(n, a, b_val):
         print("YES")
     else:
