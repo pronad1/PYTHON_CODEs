@@ -1,1 +1,1 @@
-codeforces problems solve  in Python.
+codeforces problems solve in Python.
