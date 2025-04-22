@@ -8,3 +8,5 @@ for _ in range(int(input())):
 
     if cnt==0:
         print(n+int(s[0]=="1"))
+    elif cnt==1:
+        print(n+1)
