@@ -10,3 +10,5 @@ for _ in range(int(input())):
         print(n+int(s[0]=="1"))
     elif cnt==1:
         print(n+1)
+    else:
+        print(n+cnt-1-int(s[0]=="0" and cnt>2))
