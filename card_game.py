@@ -16,6 +16,7 @@ def has_winning_card(candidate_cards, opponent_cards, n):
             return True
     return False
 
+
 t = int(input())
 for _ in range(t):
     n = int(input())
