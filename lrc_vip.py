@@ -5,4 +5,5 @@ for _ in range(int(input())):
 
     if al==1:
         print("NO")
-    
+    else:
+        
