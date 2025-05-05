@@ -6,7 +6,7 @@ for _ in range(int(input())):
     if mx - mn > k:
         print("Jerry")
     else:
-        if sum(a) % 2 == 0:
+        if sum(a) % 2 ==1:
             print("Tom")
         else:
             print("Jerry")
