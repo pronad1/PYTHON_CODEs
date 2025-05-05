@@ -6,11 +6,10 @@ for _ in range(int(input())):
     if al==1:
         print("NO")
     else:
-        t=0
         print("YES")
+        m=max(a)
         for i in range(n):
-            if a[i]!=1 and t==1:
-                print(1)
-                t=1
+            if a[i]==m:
+                print(1, end=' ')
             else:
-                print(2)
+                print(2, end=' ')
