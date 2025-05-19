@@ -2,7 +2,8 @@ for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     ze = a.count(0)
-    if ze==n:
+    on= a.count(1)
+    if ze==n or on==n:
         print("YES")
     else:
         f=0
