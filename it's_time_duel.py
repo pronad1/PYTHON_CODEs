@@ -4,9 +4,12 @@ for _ in range(int(input())):
     ze = a.count(0)
     if ze==n:
         print("YES")
-    elif:
-    
-
-
     else:
-        print("NO") 
+        f=0
+        for i in range(0, n-1):
+            if a[i] == 0 and a[i+1] == 0:
+                print("YES")
+                f=1
+                break
+        if f==0:
+            print("NO") 
