@@ -1,18 +1,12 @@
-for _ in range(int(input())):
-    n=int(input())
-    a=list(map(int, input().split()))
-    se=set(a)
-    v=0
-    m=0
-    for i in se:
-        x=a.count(i)
-        if x>m:
-            m=x
-            v=i
-    
-    se_list=list(se)
-    p=se_list.index(v)
+from collections import Counter
 
-    if se_list[p+1]-v==1 or v-se_list[p-1]==1:
-        m+=1
-    print(m)
+for _ in range(int(input())):
+    n = int(input())
+    a = list(map(int, input().split()))
+    freq = Counter(a)
+    
+    max_group = 0
+    for num in freq:
+        group_size = freq[num] + freq.get(num + 1, 0)
+        max_group = max(max_group, group_size)
+    print(max_group)
