@@ -1,34 +1,13 @@
 for _ in range(int(input())):
     n = int(input())
-    a = list(map(int, input().split()))
-    pressed = [False] * n
+    arr = list(map(int, input().split()))
+    new_arr = [arr[0]]
+    for i in range(1, n):
+        if arr[i] != arr[i-1]:
+            new_arr.append(arr[i])
+    arr = [0] + new_arr + [0]
     c = 0
-    while not all(pressed):
-        ma = -1
-        pos = -1
-        for i in range(n):
-            if not pressed[i] and a[i] > ma:
-                ma = a[i]
-                pos = i
-        if ma == -1:
-            break
-        c += 1
-        com = ma
-        pressed[pos] = True
-        for i in range(pos + 1, n):
-            if pressed[i]:
-                continue
-            if a[i] > com:
-                break
-            com = a[i]
-            pressed[i] = True
-        com = ma
-        for i in range(pos - 1, -1, -1):
-            if pressed[i]:
-                continue
-            if a[i] > com:
-                break
-            com = a[i]
-            pressed[i] = True
-            
+    for i in range(1, len(arr)-1):
+        if arr[i-1] < arr[i] and arr[i] > arr[i+1]:
+            c += 1
     print(c)
