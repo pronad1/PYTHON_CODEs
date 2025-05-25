@@ -30,4 +30,5 @@ for _ in range(int(input())):
                 break
             com = a[i]
             pressed[i] = True
+            
     print(c)
