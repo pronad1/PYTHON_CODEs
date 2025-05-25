@@ -4,7 +4,7 @@ for _ in range(int(input())):
     ma = max(a)
     pos = a.index(ma)
     c=0
-    while ma!=0:
+    while ma==0:
         c+=1
         com=ma
         for i in range(pos+1,n):
