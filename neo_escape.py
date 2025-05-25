@@ -4,42 +4,22 @@ for _ in range(int(input())):
     ma = max(a)
     pos = a.index(ma)
     c=0
-    if pos==0:
-        for i in range(1, n):
-            if a[i]<ma:
-                ma= a[i]
-            elif a[i] > ma:
-                c += 1
-                ma = a[i]
-        if a[n-1]>a[n-2]:
-            c += 1
-    elif pos == n-1:
-        for i in range(n-2, -1, -1):
-            if a[i]<ma:
-                ma= a[i]
-            elif a[i] > ma:
-                c += 1
-                ma = a[i]
-        if a[0]>a[1]:
-            c += 1
-    else:
-        c=1
-        for i in range(pos-1, -1, -1):
-            if a[i]<ma:
-                ma= a[i]
-            elif a[i] > ma:
-                c += 1
-                ma = a[i]
-        for i in range(pos+1, n):
-            if a[i]<ma:
-                ma= a[i]
-            elif a[i] > ma:
-                c += 1
-                ma = a[i]
-        if a[0]>a[1]:
-            c += 1
-        if a[n-1]>a[n-2]:
-            c += 1
-
+    while ma!=0:
+        c+=1
+        com=ma
+        for i in range(pos+1,n):
+            if a[i]>com:
+                break
+            elif a[i]<com:
+                com=a[i]
+                a[i] = 0
+        for i in range(pos-1,-1,-1):
+            if a[i]>com:
+                break
+            elif a[i]<com:
+                com=a[i]
+                a[i] = 0
+        print(a)
+        ma=max(a)
 
     print(c)
