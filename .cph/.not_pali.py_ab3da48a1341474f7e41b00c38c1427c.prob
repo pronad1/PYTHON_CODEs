@@ -1,0 +1,1 @@
+{"name":"Local: not_pali","url":"d:\\Languages\\PYTHON_CODEs\\not_pali.py","tests":[{"id":1748270881497,"input":"6\n6 2\n000000\n2 1\n01\n4 1\n1011\n10 2\n1101011001\n10 1\n1101011001\n2 1\n11\n","output":"NO\nNO\nYES\nNO\nYES\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Languages\\PYTHON_CODEs\\not_pali.py","group":"local","local":true}
