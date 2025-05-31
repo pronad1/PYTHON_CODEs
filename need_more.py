@@ -22,3 +22,4 @@ for _ in range(t):
         else:
             prefix_max[i] = max(prefix_max[i-1], current_dp)
     print(prefix_max[-1] + 1)
+
