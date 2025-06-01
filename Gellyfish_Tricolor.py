@@ -9,10 +9,16 @@ for _ in range(int(input())):
         else:
             print("Flower")
             
-    else:
+    elif  fl>kn:
         ma=max(c,d)
         if ma==c:
             print("Gellyfish")
             
+        else:
+            print("Flower")
+    else:
+        ma=max(a,b)
+        if ma==a:
+            print("Gellyfish")
         else:
             print("Flower")
