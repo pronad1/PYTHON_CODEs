@@ -16,6 +16,7 @@ for _ in range(int(input())):
             
         else:
             print("Flower")
+ 
     else:
         ma=max(a,b)
         if ma==a:
