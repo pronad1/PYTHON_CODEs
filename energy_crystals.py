@@ -1,8 +1,11 @@
 for _ in range(int(input())):
     x=int(input())
     c=0
-    cur=0
-    while cur<x:
+    a,b,c=0,0,0
+    while a<x:
         c+=1
-        cur=cur*2+1
-    print(c+2)
+        a=min(x,b*2+1)
+        a, b = b, a
+        b, c = c, b
+        
+    print(c)
