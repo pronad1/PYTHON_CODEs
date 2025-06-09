@@ -1,11 +1,12 @@
 for _ in range(int(input())):
     n = int(input())
+    a = list(map(int, input().split()))
     mp = {}
-    for _ in range(n):
-        x = int(input())
+    for x in a:
         mp[x] = mp.get(x, 0) + 1
 
     counts = sorted(mp.values(), reverse=True)
-    x = counts[0] if len(counts) > 0 else None
-    y = counts[1] if len(counts) > 1 else None
-    print(x, y)
+    if counts[0] == 1 or counts[1] == 1:
+        print(1)
+    else:
+        print(max(counts[0], counts[1]))
