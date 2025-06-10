@@ -1,6 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
+    
     mp = {}
     for x in a:
         mp[x] = mp.get(x, 0) + 1
