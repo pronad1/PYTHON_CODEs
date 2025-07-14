@@ -18,3 +18,4 @@ for _ in range(t):
                 break
         if not found:
             print(-1)
+# how is this first code for a beginner!!!
