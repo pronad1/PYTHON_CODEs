@@ -1,4 +1,5 @@
-for _ in range(int(input())):
+x=int(input())
+for _ in range(x):
     n, x = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
@@ -18,5 +19,4 @@ for _ in range(int(input())):
             i = current_end
         else:
             i -= 1
-    
     print(count)
