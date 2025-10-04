@@ -1,4 +1,3 @@
-
 g="edd";# global variable
 MyVariableName = "John"; #Pascal Case(Each word starts with a capital letter)
 print(MyVariableName); 
