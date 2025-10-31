@@ -1,6 +1,4 @@
 import math
-
-
 t = int(input())
 for _ in range(t):
     s = input()
