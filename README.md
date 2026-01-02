@@ -1,3 +1,3 @@
-codeforces problems solve in 
-Python.
-C++
+### codeforces problems solve in 
+- Python.
+- C++
